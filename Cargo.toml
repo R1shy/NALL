@@ -1,6 +1,13 @@
 [package]
 name = "nall"
-version = "0.1.0"
+version = "0.0.1"
 edition = "2024"
+author = "R1shy <kadlecekemma@gmail.com>"
+license = "GPL-2.0-or-later"
+description = "Not Another Logging Library"
+homepage = "https://github.com/R1shy/NALL"
+repository = "https://github.com/R1shy/NALL"
+readme = "README.md"
+
 
 [dependencies]
