@@ -1,5 +1,3 @@
-use crate::levels::LogLevel;
-
 #[cfg(test)]
 
 use super::*;
