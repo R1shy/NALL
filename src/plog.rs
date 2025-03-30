@@ -1,31 +1,23 @@
-use std::process::exit;
 use crate::levels;
+use std::process::exit;
 
 pub fn log(level: levels::LogLevel, msg: String) {
-   
-    match level { 
+    match level {
+        levels::LogLevel::Warn => {
+            println!("WARN: {}", msg);
+        }
 
-    levels::LogLevel::Warn => {
-          println!("WARN: {}", msg);
-       }
-        
-    levels::LogLevel::Info => {
-        println!("INFO: {}", msg)
-    }     
-   
-    levels::LogLevel::Err => {
-        println!("ERR: {}", msg);
+        levels::LogLevel::Info => {
+            println!("INFO: {}", msg)
+        }
+
+        levels::LogLevel::Err => {
+            println!("ERR: {}", msg);
+        }
+
+        levels::LogLevel::Fatal => {
+            println!("Fatal: {}", msg);
+            exit(1);
+        }
     }
-
-    levels::LogLevel::Fatal => {
-        println!("Fatal: {}", msg);
-        exit(1);
-    }
-
-    }
-
-
-
-
-
 }

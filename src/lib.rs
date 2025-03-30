@@ -1,12 +1,9 @@
-pub mod plog;
-pub mod flog;
-pub mod levels;
 #[cfg(feature = "color")]
 pub mod clog;
-pub mod config;
-pub use plog::log;
+#[cfg(feature = "color")]
+pub use clog::clog;
+pub mod flog;
+pub mod levels;
+pub mod plog;
 pub use flog::flog;
-
-pub mod constants {
- pub static mut USE_COLOR: bool = false;
-}
+pub use plog::log;
