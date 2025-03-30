@@ -6,7 +6,7 @@ this is in fact another logging Library
 # Usage
 
 ```rust
-use NALL::plog::log;
+use NALL::log::log;
 
 fn main() {
 
