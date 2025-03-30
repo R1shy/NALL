@@ -2,8 +2,9 @@ use std::{fs::File, io::Write, path::Path};
 use crate::levels::LogLevel;
 
 
-pub fn jlog(path: String, msg: String, level: LogLevel) {
+pub fn flog(path: String, msg: String, level: LogLevel) {
     let tpath = Path::new(&path);
+
 
     match tpath.exists() {
         true => {

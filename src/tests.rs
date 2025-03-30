@@ -2,7 +2,7 @@
 
 use super::*;
 
-
+// don't test fatal because it will fail the test :(
 #[test]
 fn plog_test() {
 
