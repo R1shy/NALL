@@ -1,0 +1,4 @@
+Info: 63
+Warn: 222
+Err: 1
+Fatal: 52

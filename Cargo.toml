@@ -10,7 +10,6 @@ repository = "https://github.com/R1shy/NALL"
 readme = "README.md"
 
 [features]
-color = ["dep:ansi_term"]
+color = []
 
 [dependencies]
-ansi_term = {version = "0.12", optional = true}
