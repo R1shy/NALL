@@ -7,13 +7,15 @@ this is in fact another logging Library
 
 ```rust
 use NALL::log::log;
-
+use NALL::clog::clog;
 fn main() {
 
 
 log(NALL::levels::LogLevel::Info, "Hi I am an info".to_string())
 // there are also Warn, Err, Fatal
 // NOTE: using Fatal will kill your program with exit code 1!
+clog(NALL::levels::LogLevel::Info, "Hi I am an info".to_string());
+// you can also have colored messages with the color feature
 }
 ```
 
