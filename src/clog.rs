@@ -10,11 +10,11 @@ pub fn clog(level: levels::LogLevel, msg: String) {
 
     match level {
         levels::LogLevel::Warn => {
-            println!("{}: {}", warnc, msg);
+            println!("{}: {}", Warnc, msg);
         }
 
         levels::LogLevel::Info => {
-            println!("{}: {}", infoc, msg)
+            println!("{}: {}", Infoc, msg)
         }
 
         levels::LogLevel::Err => {
