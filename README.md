@@ -1,5 +1,4 @@
 # NALL (Not Another Logging Library)
-
 this is in fact another logging Library
 
 
@@ -30,4 +29,8 @@ clog(NALL::levels::LogLevel::Info, "Hi I am an info".to_string());
     cargo new my-project
     cd my-project 
     cargo add NALL
+
+# add clog:
+    cargo add NALL --features color
+
 ```
