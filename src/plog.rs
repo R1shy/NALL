@@ -1,7 +1,9 @@
 use crate::levels;
 use std::process::exit;
+use crate::outputs::Outputs;
 
-pub fn log(level: levels::LogLevel, msg: String) {
+pub fn log(level: levels::LogLevel, msg: String, out: Outputs) {
+
     match level {
         levels::LogLevel::Warn => {
             println!("WARN: {}", msg);
@@ -12,12 +14,28 @@ pub fn log(level: levels::LogLevel, msg: String) {
         }
 
         levels::LogLevel::Err => {
+            if checkout(out) == 0 {
             println!("ERR: {}", msg);
+        }
+            eprintln!("ERR: {}", msg)
         }
 
         levels::LogLevel::Fatal => {
+            if checkout(out) == 0 {
             println!("Fatal: {}", msg);
             exit(1);
         }
+            eprintln!("Fatal: {}", msg);
+        }
     }
+}
+
+fn checkout(out: Outputs) -> i32 {
+        
+    match out {
+        Outputs::Allstdout => return 0,
+        Outputs::Errtostderr => return 1
+    }
+
+
 }

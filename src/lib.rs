@@ -5,5 +5,7 @@ pub use clog::clog;
 pub mod flog;
 pub mod levels;
 pub mod plog;
+pub mod outputs;
 pub use flog::flog;
 pub use plog::log;
+
