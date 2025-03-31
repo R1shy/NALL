@@ -1,4 +1,4 @@
 pub enum Outputs {
     Allstdout,
-    Errtostderr
+    Errtostderr,
 }
