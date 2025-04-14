@@ -10,11 +10,14 @@ use NALL::clog::clog;
 fn main() {
 
 
-log(NALL::levels::LogLevel::Info, "Hi I am an info".to_string())
-// there are also Warn, Err, Fatal
-// NOTE: using Fatal will kill your program with exit code 1!
-clog(NALL::levels::LogLevel::Info, "Hi I am an info".to_string());
-// you can also have colored messages with the color feature
+log(NALL::levels::LogLevel::Info, "Hi I am information".to_string());
+log(NALL::levels::LogLevel::Warn, "Hi, I am a warning".to_string());
+log(NALL::levels::LogLevel::Err, "Hi, I am an error".to_string());
+log(NALL::levels::LogLevel::Fatal, "Goodbye :)".to_string());
+clog(NALL::levels::LogLevel::Info, "Hi I am information".to_string());
+clog(NALL::levels::LogLevel::Warn, "Hi, I am a warning".to_string());
+clog(NALL::levels::LogLevel::Err, "Hi, I am an error".to_string());
+clog(NALL::levels::LogLevel::Fatal, "Goodbye :)".to_string());
 }
 ```
 
