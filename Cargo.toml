@@ -9,7 +9,5 @@ homepage = "https://github.com/R1shy/NALL"
 repository = "https://github.com/R1shy/NALL"
 readme = "README.md"
 
-[features]
-color = []
 
 [dependencies]
