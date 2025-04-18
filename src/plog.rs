@@ -2,7 +2,7 @@ use crate::levels;
 use crate::outputs::Outputs;
 use std::process::exit;
 
-pub fn log(level: levels::LogLevel, msg: String, out: Outputs) {
+pub fn plog(level: levels::LogLevel, msg: String, out: Outputs) {
     match level {
         levels::LogLevel::Warn => {
             println!("WARN: {}", msg);

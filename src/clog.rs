@@ -1,11 +1,12 @@
 use crate::levels;
 use std::process::exit;
 
-pub fn clog(level: levels::LogLevel, msg: String) {
-    let warnc = "\x1b[38;5;222mWARN\x1b[0m";
-    let infoc = "\x1b[38;5;63mINFO\x1b[0m";
-    let errc = "\x1b[38;5;1mERR\x1b[0m";
-    let fatalc = "\x1b[38;5;52mFATAL\x1b[0m";
+pub fn clog(level: levels::LogLevel, msg: String, color: Option<i32>) {
+    let col: i32 = color.unwrap_or(20);
+    let warnc = format!("\x1b[38;5;{}mWARN\x1b[0m", col);
+    let infoc = format!("\x1b[38;5;{}mINFO\x1b[0m", col);
+    let errc = format!("\x1b[38;5;{}mERR\x1b[0m", col);
+    let fatalc = format!("\x1b[38;5;{}mFATAL\x1b[0m", col);
 
     match level {
         levels::LogLevel::Warn => {
