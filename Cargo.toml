@@ -1,6 +1,6 @@
 [package]
 name = "nall"
-version = "0.5.0"
+version = "0.6.0"
 edition = "2024"
 author = "R1shy <kadlecekemma@gmail.com>"
 license = "GPL-2.0-or-later"
